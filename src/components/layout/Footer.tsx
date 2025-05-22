@@ -13,8 +13,12 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="md:col-span-4">
             <div className="flex items-center">
-              <Logo />
-              <span className="ml-2 text-lg font-bold text-gray-900 dark:text-white">Saffire Tech</span>
+              <img 
+              src="https://imgur.com/mUShMN5.png" 
+              alt="Website Logo" 
+              className="logo w-12 h-12 object-contain" 
+            />
+              
             </div>
             <p className="mt-4 text-gray-600 dark:text-gray-400">
               Empowering individuals and brands by crafting standout CVs and vibrant portfolio websites that open doors to opportunities.

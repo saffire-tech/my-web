@@ -38,9 +38,15 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center" onClick={closeMenu}>
-            <Logo />
-            <span className="ml-2 text-lg font-bold text-gray-900 dark:text-white">Saffire Tech</span>
+            <img 
+              src="https://imgur.com/mUShMN5.png" 
+              alt="Website Logo" 
+              className="logo w-12 h-12 object-contain" 
+            />
+            
           </Link>
+            <span className="ml-2 text-lg font-bold text-gray-900 dark:text-white">Saffire Tech</span>
+          
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
