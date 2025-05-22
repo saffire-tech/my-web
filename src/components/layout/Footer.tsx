@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, MessageSquare, ChevronRight } from 'lucide-react';
+import { Instagram, Linkedin, MessageSquare, ChevronRight, Lock } from 'lucide-react';
 import Logo from '../ui/Logo';
 
 const Footer: React.FC = () => {
@@ -170,9 +170,18 @@ const Footer: React.FC = () => {
         
         {/* Bottom Line */}
         <div className="mt-12 pt-6 border-t border-gray-200 dark:border-gray-800">
-          <p className="text-center text-sm text-gray-500 dark:text-gray-400">
-            © {currentYear} Saffire Tech Consult. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              © {currentYear} Saffire Tech Consult. All rights reserved.
+            </p>
+            <Link 
+              to="/admin/login" 
+              className="mt-2 sm:mt-0 inline-flex items-center text-sm text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+            >
+              <Lock size={14} className="mr-1" />
+              Admin Portal
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -17,15 +17,20 @@ const LoginPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
-    try {
-      await signIn(email, password);
-      toast.success('Welcome back!');
-    } catch (error) {
+
+    // Check for specific credentials
+    if (email === 'saffiretech01@gmail.com' && password === 'osafo811') {
+      try {
+        await signIn(email, password);
+        toast.success('Welcome back!');
+      } catch (error) {
+        toast.error('Authentication failed');
+      }
+    } else {
       toast.error('Invalid credentials');
-    } finally {
-      setLoading(false);
     }
+    
+    setLoading(false);
   };
 
   return (
